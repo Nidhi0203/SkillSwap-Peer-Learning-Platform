@@ -3,21 +3,27 @@ import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 import './SignUp.css'
+import Navba1r from "./Navbar";
 const SignUp = () => {
     const [email, setemail] = useState("");
     const [pass, setPassword] = useState("");
-
+    const obj = [{
+        email: "nidhi@g.c",
+        password: "Rexi",
+    }]
     const handelSubmit = (e) => {
         e.preventDefault();
-        const obj = {
+        const obj1 = {
             mail: email,
             passw: pass,
         }
+        obj.push(obj1);
         console.log(obj);
     }
 
     return (
         <main className="sGM">
+            <Navba1r></Navba1r>
             <Container className="container">
                 <form onSubmit={handelSubmit}>
                     <table>
@@ -40,7 +46,7 @@ const SignUp = () => {
 
                             <tr>
                                 <td>
-                                    Already has account? <a href="http://">Log in</a>
+                                    Already has account? <Button >Log in</Button>
                                 </td>
                             </tr>
                         </tbody>
@@ -50,4 +56,5 @@ const SignUp = () => {
         </main>
     )
 }
+
 export default SignUp;
