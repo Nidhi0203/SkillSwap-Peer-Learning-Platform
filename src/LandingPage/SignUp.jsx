@@ -22,8 +22,9 @@ const SignUp = () => {
     }
 
     return (
-        <main className="sGM">
+        <>
             <Navba1r></Navba1r>
+        <main className="sGM">
             <Container className="container">
                 <form onSubmit={handelSubmit}>
                     <table>
@@ -54,6 +55,7 @@ const SignUp = () => {
                 </form>
             </Container>
         </main>
+        </>
     )
 }
 
